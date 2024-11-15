@@ -1,0 +1,36 @@
+
+% ----------------------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Filters (non morphological)}}  \\
+    \toprule
+    \BF{Function}                                                        & \BF{Description}  \\
+    \hline \hline
+    \SmFn{gaussianFilter}{imIn,radius,imOut}                             & Gaussian filter  \\
+    \hline
+    \SmFn{horizConvolve}{imIn,kernel,imOut}                              & Convolution against an horizontal kernel \\
+    \SmFn{vertConvolve}{imIn,kernel,imOut}                               & ... a vertical one  \\
+    \SmFn{convolve}{imIn,kernel,imOut}                                   & Both.  \BF{2D} filters.\\
+    \hline
+    \SmFn{recursiveBilateralFilter}{imIn,sigmaW,sigmaW,imOut}            & Fast bilateral filter  \\
+    \hline
+    \SmFn{cannyEdgeDetection}{imIn,sigma,imOut}                          & \BF{2D} filter  \\
+    \hline
+    \SmFn{dericheEdgeDetection}{imIn,alpha,imOut}                        & \BF{2D} filter  \\
+    \hline
+    \SmFn{kuwaharaFilter}{imIn,radius,imOut}                             & \BF{2D} filter  \\
+    \hline
+    \SmFn{meanShiftFilter}{imIn,radius,imOut}                            & \BF{2D} filter  \\
+    \hline
+    \SmFn{sigmaFilter}{imIn,radius,sigma,pctNbMinPixel,excOutlier,imOut} & \BF{2D} filter  \\
+    \hline
+    \SmFn{gaborFilter}{imIn,sigma,theta,lambda,psi,gamma,imOut}          & \BF{2D} filter  \\
+    \hline
+  \end{tabularx}
+\end{table}
+

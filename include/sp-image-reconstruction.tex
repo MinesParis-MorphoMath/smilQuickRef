@@ -1,0 +1,42 @@
+
+% ----------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Image reconstruction}}  \\
+    \toprule
+    \BF{Function}                             & \BF{Description}  \\
+    \hline \hline
+    \SmFn{geoErode}{imIn,imMask,imOut[,se]}   & Geodesic Dilation of \TT{imIn} over the reference \TT{imMask}  \\
+    \hline
+    \SmFn{geoDilate}{imIn,imMask,imOut[,se]}  & Geodesic Dilation of \TT{imIn} under the reference  \TT{imMask}  \\
+    \hline
+    \SmFn{build}{imMark,imRef,imOut[,se]}     & Reconstruction by dilation of \TT{imMark} under the reference \TT{imRef} \\
+    \hline
+    \SmFn{dualBuild}{imMark,imRef,imOut[,se]} & Reconstruction by erosion of \TT{imMark} over the reference \TT{imRef}  \\
+    \hline
+    \SmFn{hBuild}{imMark,h,imOut[,se]}        & Reconstruction by dilation of ${(f-h)}$ under the reference $f$  \\
+    \hline
+    \SmFn{hDualBuild}{imMark,h,imOut[,se]}    & Reconstruction by erosion of ${(f+h)}$ over the reference $f$  \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+% raze => build
+% flood => dualBuild
+%
+% \begin{itemize}
+%  \setlength{\itemsep}{0.05em}
+%% \item Reconstruction by dilation
+%%     {\bf build}(imMark,imRef,imOut[,{\em se}])
+%% \item Reconstruction by erosion
+%%     {\bf dualBuild}(imMark,imRef,imOut[,{\em se}])
+%% PSL \item Flood: flood imRef constrained by imMark. (The original SMIL name for this function is {\bf dualBuild}).
+%% PSL     {\bf flood}(imMark,imRef,imOut[,{\em se}])
+%% PSL \item Raze: raze imRef constrained by imMark. (The original SMIL name for this function is {\bf build}).
+%% PSL     {\bf raze}(imMark,imRef,imOut[,{\em se}])
+% \end{itemize}

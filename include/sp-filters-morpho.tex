@@ -1,0 +1,44 @@
+
+% ----------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Morphological Filters}}  \\
+    \toprule
+    \BF{Function}                        & \BF{Description}  \\
+    \hline \hline
+    \SmFn{open}{imIn,imOut[,se]}         & Opening  \\
+    \SmFn{close}{imIn,imOut[,se]}        & Closing  \\
+    \hline
+    \SmFn{asfOpen}{imIn,imOut[,se]}      & Alternate \TT{Open/Close} with sizes from $1$ to $size(se)$  \\
+    \SmFn{asfClose}{imIn,imOut[,se]}     & Alternate \TT{Close/Open} with sizes from $1$ to $size(se)$  \\
+    \hline
+    \SmFn{buildOpen}{imIn,imOut,se}      & Erosion followed by reconstruction by dilation  \\
+    \SmFn{buildClose}{imIn,imOut,se}     & Dilation followed by reconstruction by erosion  \\
+    \hline
+    \SmFn{asBuildOpen}{imIn,imOut[,se]}  & Alternate \TT{buildOpen/buildClose} with sizes from $1$ to $size(se)$ \\
+    \SmFn{asBuildClose}{imIn,imOut[,se]} & Alternate \TT{buildClose/buildOpen} with sizes from $1$ to $size(se)$ \\
+    \hline
+    \SmFn{areaOpen}{imIn,size,imOut}     &  \\
+    \SmFn{areaClose}{imIn,size,imOut}     &  \\
+    \SmFn{widthOpen}{imIn,size,imOut}    & Opening and closing by attributes : area, width and height  \\
+    \SmFn{widthClose}{imIn,size,imOut}     &  \\
+    \SmFn{heightOpen}{imIn,size,imOut}   &  \\
+    \SmFn{heightClose}{imIn,size,imOut}     &  \\
+    \hline
+    \SmFn{ultimateOpen}{imIn,imTrans,imIndic,se,stopSize,delta} & \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+%
+%  Functions not available under smilPython
+%
+% \SmFn{AF}{imIn,size,imOut[,se]} & Alternate filter : an opening followed by a closing of the same size \TT{size}
+% \SmFn{buildAF}{imIn,size,imOut[,se]} & Alternate \TT{buildOpen} and \TT{buildClose} of a given \TT{size}
+% \SmFn{ASF\_Leveling}{imIn,imOut,se} ??   & Alternate levelings  \\

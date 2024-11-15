@@ -1,0 +1,32 @@
+
+\paragraph*{Notes}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item this isn't an exhaustive listing of all features available on Smil, but just the most common features. For a complete listing, please refer to the complete documentation (\IT{RTFM});
+
+  \item some functions may have some other variants on the parameters (number or presence). Most of the time, these functions are marked with a \BF{"*"}. Take a look on the complete documentation;
+
+
+  \item To make \BF{smilPython} available in your programs you must type one of the following commands:
+    \begin{lstlisting}
+    from smilPython import *
+    import smilPython as sp
+    \end{lstlisting}
+
+  \item parameters between square brackets indicates an optional parameter. For example :
+    \begin{lstlisting}[language=Python]
+    # erode() function prototype : 
+    erode(imIn, imOut[, se])
+    # function call
+    erode(imIn, imOut)
+    erode(imIn, imOut, SquSE())
+    erode(imIn, imOut, CrossSE(3))
+    \end{lstlisting}
+
+  \item if not specified, default Structuring Element is used in most morphological functions, usualy the last one;
+
+  \item \BF{all Smil functions} returns some value : a \BF{data} or a \BF{result} indicating an error condition (\BF{1} means \BF{no error});
+
+  \item output image passed as a parameter \BF{must always} be created (even if not initialized) before any function call.
+
+\end{itemize}

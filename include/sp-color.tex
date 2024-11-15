@@ -1,0 +1,34 @@
+
+
+
+% ----------------------------------------------------------
+%
+%  
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Color}}  \\
+    \toprule
+    \BF{Function}                                            & \BF{Description}  \\
+    \hline \hline
+    \SmFr{im1,im2,im3}{extractChannels}{colorIm}             & Extract channels from a color image \\
+    \hline
+    \SmFr{colorOut}{combineChannels}{im1,im2,im3}            & Combine channels into a color image \\
+    \hline
+    \SmFr{im8}{Image}{colorImage,'UINT8'}                    & Convert color image to luminance  \\
+    \SmFn{RGBToLuminance}{colorim,im8}                       &  \\
+    \hline
+    \SmFn{RGBToXYZ}{imIn,imOut}  \SmFn{XYZToRGB}{imIn,imOut} &  \\
+    \SmFn{RGBToLAB}{imIn,imOut}  \SmFn{LABToRGB}{imIn,imOut} & Color space conversions  \\
+    \SmFn{RGBToHLS}{imIn,imOut}  \SmFn{HLSToRGB}{imIn,imOut} &  \\
+    \hline
+    \SmFn{gradientLAB}{imRGB,im8,se}                         &  \\
+    \SmFr{im8}{gradientLAB}{imRGB,se}                        & Color gradient in HLS and LAB space \\
+    \SmFn{gradientHLS}{imRGB,im8,se}                         &  \\
+    \SmFr{im8}{gradientHLS}{imRGB,se}                        &  \\
+    \hline
+  \end{tabularx}
+\end{table}
+

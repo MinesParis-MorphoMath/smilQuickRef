@@ -1,0 +1,42 @@
+
+
+% ----------------------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{I/O images}}  \\
+    \toprule
+    \BF{Function}                              & \BF{Description}  \\
+    \hline \hline
+    \SmFr{im}{Image}{'images/toto.png'}        & Read an image from file  \\
+    \SmFr{im}{Image}{'http://server/toto.png'} & Read an image from some internet server.  \\
+    \hline
+    \SmFr{im2}{Image}{im}                      & Create an image (as \TT{im}) - no content copy  \\
+    \hline
+    \SmFr{im2}{Image}{im,True}                 & Create an image (as \TT{im}) and copy its content  \\
+    \hline
+    \SmFr{im2}{Image}{im,'UINT16'}             & Create an image (as \TT{im}) but with another data type \\
+    \hline
+    \SmFn{read}{'titi.png',im}                 & Read a file (or a list of files for 3D) into an image  \\
+    \SmFn{write}{im,'titi.png'}                & Write \IT{im} into a file (or a list of files for 3D) \\
+    \SmFn{getHttpFile}{url,fout}               & Retrieve a file from internet  \\
+    \hline
+    \SmFn{im.show}{}                           & Display an image  \\
+    \SmFn{im.showLabel}{}                      & Display an image with false colors  \\
+    \hline
+    \SmFr{val}{im.getPixel}{x,y[,z]}           & Get and set pixel values  \\
+    \SmFn{im.setPixel}{x,y[,z],val}            &  \\
+    \hline
+    \SmFr{width}{im.getWidth}{}                &  \\
+    \SmFr{height}{im.getHeight}{}              & Get image size  \\
+    \SmFr{depth}{im.getDepth}{}                &  \\
+    \SmFr{dimensions}{getDimensions}{}         & Get image dimensions (2D or 3D)  \\
+    \hline
+    \SmFr{count}{im.getPixelCount}{}           & Number of pixels ($width \times height \times depth$)  \\
+    \hline
+  \end{tabularx}
+\end{table}

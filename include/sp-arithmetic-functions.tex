@@ -1,0 +1,56 @@
+
+% ----------------------------------------------------------
+%
+%  
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Pixel-based arithmetic and logic functions}}  \\
+    \toprule
+    \BF{Function}                            & \BF{Description}  \\
+    \hline \hline
+    \SmFn{inv}{imIn,imOut}                   & Invert the image  \\
+    \hline
+    \SmFn{add}{imIn,imageOrValue,imOut}      & Add an image to an image or value to \IT{imIn}  \\
+    \SmFn{addNoSat}{imIn,imageOrValue,imOut} & with or without bounds value check  \\
+    \hline
+    \SmFn{sub}{imIn,imageOrValue,imOut}      & Subtract an image from an image or value from \IT{imIn}  \\
+    \SmFn{subNoSat}{imIn,imageOrValue,imOut} & with or without bounds value check  \\
+    \hline
+    \SmFn{mul}{imIn,imageOrValue,imOut}      & Multiply an image by an image or value from \IT{imIn}  \\
+    \SmFn{mulNoSat}{imIn,imageOrValue,imOut} & with or without bounds value check  \\
+    \hline
+    \SmFn{div}{imIn,imageOrValue,imOut}      & Divide an image by an image or value from \IT{imIn}  \\
+    \hline
+    \SmFn{grt}{imIn,imageOrValue,imOut}      & Arithmetic comparison between an image and an image (or value).  \\
+    \SmFn{grtOrEqu}{imIn,imageOrValue,imOut} & Pixels in the output image are set to  \\
+    \SmFn{equ}{imIn,imageOrValue,imOut}      & \TT{max(T)} if result is \TT{true} and \TT{0} otherwise  \\
+    \SmFn{lowOrEqu}{imIn,imageOrValue,imOut} &  \\
+    \SmFn{low}{imIn,imageOrValue,imOut}      &  \\
+    \hline
+    \SmFn{diff}{imIn,imageOrValue,imOut}     & Same as \BF{equ()}  \\
+    \hline
+    \SmFn{absDiff}{imIn,imageOrValue,imOut}  & Output image with the absolute difference an image and an image or value  \\
+    \hline
+    \SmFn{logicAnd}{im1,im2,imOut}           & Logic comparison between between pixels of two images.  \\
+    \SmFn{logicOr}{im1,im2,imOut}            & Pixels in the output image are set to \BF{1} if result is \BF{true} and \BF{0} otherwise. \\
+    \SmFn{logicXOr}{im1,im2,imOut}           &  \\
+    \hline
+    \SmFn{bitAnd}{im1,im2,imOut}             & Same as above but comparison is done \BF{bitwise}.  \\
+    \SmFn{bitOr}{im1,im2,imOut}              &  \\
+    \SmFn{bitXOr}{im1,im2,imOut}             &  \\
+    \hline
+    \SmFn{sup}{im1,im2,imOut}                & Compute the \TT{sup} of two images  \\
+    \SmFn{inf}{im1,im2,imOut}                & Compute the \TT{inf} of two images  \\
+    \hline
+    \SmFn{log}{imIn,imOut,base}              & Transform range of values of input image to a logarithmic scale.  \\
+    \SmFn{exp}{imIn,imOut,base}              & Revert a \BF{log} transform.  \\
+    \hline
+    \SmFn{mask}{imIn,imMask,imOut}           & Apply a mask on an input image  \\
+    \hline
+    \SmFn{applyLookup}{imIn,lutMap,imOut}    & Transform pixel values based on a lookup table (map)  \\
+    \hline
+  \end{tabularx}
+\end{table}

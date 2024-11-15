@@ -1,0 +1,40 @@
+
+% ----------------------------------------------------------
+%
+%  
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Connexity oriented functions - Labelling}}  \\
+    \toprule
+    \BF{Function}                                       & \BF{Description}  \\
+    \hline \hline
+    \SmFn{minima}{imIn,imOut[,se]}                      & Regional minima de \TT{imIn}  \\
+    \SmFn{minimaLabeled}{imIn,imOut[,se]}               & ... and label it  \\
+    \SmFn{hMinima}{imIn,height,imOut[,se]}              & Regional minima after \TT{hDualBuild}  \\
+    \SmFn{hMinimaLabeled}{imIn,height,imOut[,se]}       & ... and label it  \\
+    \hline
+    \SmFn{maxima}{imIn,imOut[,se]}                      & Regional maxima de \TT{imIn}  \\
+    \SmFn{maximaLabeled}{imIn,imOut[,se]}               & ... and label it  \\
+    \SmFn{hMaxima}{imIn,height,imOut[,se]}              & Regional maxima after \TT{hBuild}  \\
+    \SmFn{hMaximaLabeled}{imIn,height,imOut[,se]}       & ... and label it  \\    
+    \hline
+    \SmFn{fastMinima}{imIn,imOut[,se]}                  & Regional \TT{minima/maxima} computation  \\
+    \SmFn{fastMaxima}{imIn,imOut[,se]}                  & based on arrowing graphs  \\
+    \hline
+    \SmFn{label}{imIn,imLabel[,se]}                     & Assign a different label to each connected component \\
+    \hline
+    \SmFn{fastLabel}{imIn,imLabel[,se]}                 & Fast parallelized \\
+    \hline
+    \SmFn{labelWithArea}{imIn,imLabel[,se]}             & Labell an image (with it's already labeled image)  \\
+    \SmFn{labelWithVolume}{imIn,imLabelIn,imLabel[,se]} & with some image descriptor  \\
+    \SmFn{LabelWithMaxima}{imIn,imLabelIn,imLabel[,se]} &  \\
+    \SmFn{labelWithMean}{imIn,imLabelIn,imLabel[,se]}   &  \\
+    \hline
+    \SmFn{lambdaLabel}{imIn,lambdaVal,imOut[,se]}       & Flat zones labelization  \\
+    \hline
+  \end{tabularx}
+\end{table}
+

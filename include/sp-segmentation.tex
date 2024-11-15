@@ -1,0 +1,41 @@
+
+% ----------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Segmentation}}  \\
+    \toprule
+    \BF{Function}                                           & \BF{Description}  \\
+    \hline \hline
+    \SmFn{gradient}{imIn,imOut[,se]} \Note                  & Compute image gradient  \\
+    \hline
+    \SmFn{watershed}{imGrad,imWs[,se]}                      & Watershed of \TT{imGrad} into \TT{imWs}  \\
+    \hline
+    \SmFn{watershed}{imGrad,imMark,imWs[,se]}               & Watershed of \TT{imGrad} into \TT{imWs}. \TT{imMark} shall be labeled  \\
+    \hline
+    \SmFn{watershed}{imGrad,imMark,imWs,imBasins[,se]}      & Watershed of \TT{imGrad} into \TT{imWs}, as above. \TT{imBasins} is generated with a labeled mosaic without the watershed line. \\
+    \hline
+    \SmFn{basins}{imGrad,imBasins[,se]}                     & Basins (labelled mosaic without watershed line) of \TT{imGrad}  \\
+    \hline
+    \SmFn{basins}{imGrad,imMark,imBasins[,se]}              & Basins (labelled mosaic without watershed line) of imGrad from markers  \\
+    \hline
+    \SmFn{waterfall}{imGrad,level,imWf[,se]} \Note          & \TT{level} waterfall iterations of imGrad into imWf  \\
+    \hline
+    \SmFn{stochasticWatershed}{imMark,imGrad,imWs,nSeed,se} & Stochastic Watershed (see doc)  \\
+    \hline
+  \end{tabularx}
+
+\end{table}
+
+
+%     \SmFn{watershedExtinction}{imGrad,imEV,eType[,se]} ?? XX & Hierarchical segmentation based on extinction values: \TT{imGrad} is flooded and the computed extinction value is assigned to the minima in \TT{imEV} image. \TT{eType} can be \TT{d} (dynamics), \TT{a} (area) or \TT{v} (volume). \\
+% \hline
+
+% \SmFr{imSeg,MST}{watershedEV}{imGrad,EVType[,se]} ?? XX & Extinction values based hierarchical segmentation  \\
+% \hline
+% \SmFn{getEVLevel}{imFineSeg,MST,Nregions,imSeg}  ?? XX   & Get a partition \TT{imSeg} with \TT{Nregions} from the hierarchy stored in \TT{MST} graph  \\
+% \hline

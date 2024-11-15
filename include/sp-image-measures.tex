@@ -1,0 +1,46 @@
+
+
+% ----------------------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Measures}}  \\
+    \toprule
+    \BF{Function}                                                   & \BF{Description}  \\
+    \hline \hline
+    \SmFr{flag}{isBinary}{im}                                       & Two levels image  \\
+    \hline
+    \SmFr{area}{area}{im}                                           & Area of the image  \\
+    \hline
+    \SmFr{volume}{volume}{im}                                       & Volume of the image  \\
+    \hline
+    \SmFr{min}{minVal}{im}                                          &  \\
+    \SmFr{max}{maxVal}{im}                                          &  \\
+    \SmFr{mean,stddev}{meanVal}{im}                                 &  \\
+    \SmFr{mode}{modeVal}{im}                                        & Statistical descriptors  \\
+    \SmFr{median}{medianVal}{im}                                    &  \\
+    \SmFr{range}{rangeVal}{im}                                      &  \\
+    \SmFr{values}{valueList}{im}                                    &  \\
+    \hline
+    \SmFr{values}{measBarycenter}{imIn}                             & Barycenter  \\
+    \hline
+    \SmFr{values}{measMoments}{imIn,onlyNonZero,centered}           & First and second order moments \\
+    \hline
+    \SmFr{mat}{measCovariance}{im1,im2,dx,dy,dz,maxSteps,centered}  & Covariance between two images  \\
+    \SmFr{mat}{measAutoCovariance}{imIn,dx,dy,dz,maxSteps,centered} & Auto covariance  \\
+    \hline
+    \SmFr{values}{measEntropy}{imIn}                                & Entropy of an image  \\
+    \SmFr{values}{measEntropy}{imIn,imMask}                         &  \\
+    \hline
+    \SmFr{values}{measBoundBox}{imIn}                               & Bounding Box  \\
+    \hline
+    \SmFr{values}{measGranulometry}{imIn,se,stepSize,CDF,maxSeSize} & Granulometry  \\
+    \hline
+
+  \end{tabularx}
+\end{table}
+

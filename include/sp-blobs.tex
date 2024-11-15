@@ -1,0 +1,46 @@
+
+% ----------------------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Blobs}}  \\
+    \toprule
+    \BF{Function}                                             & \BF{Description}  \\
+    \hline \hline
+    \SmFr{blobs}{createBlobs}{imLabel,onlyNonZero}            & Create a map of blobs from a labeled image  \\
+    \hline
+    \SmFr{areas}{blobsArea}{imLabel,onlyNonZero}              & Create blobs and return the area for each one \\
+    \SmFr{areas}{blobsArea}{blobs}                            & Gets the area of each blob  \\
+    \hline
+    \SmFr{volumes}{blobsVolume}{imIn,blobs}                   & Get the volume of each blob  \\
+    \hline
+    \SmFr{mins}{blobsMinVal}{imIn,blobs}                      &  \\
+    \SmFr{max}{blobsMaxVal}{imIn,blobs}                       &  \\
+    \SmFr{mean,stddev}{blobsMeanVal}{imIn,blobs}              &  \\
+    \SmFr{modes}{blobsModeVal}{imIn,blobs}                    & Get a map of statistical descriptors  \\
+    \SmFr{medians}{blobsMedianVal}{imIn,blobs}                &  \\
+    \SmFr{ranges}{blobsRangeVal}{imIn,blobs}                  &  \\
+    \SmFr{values}{blobsValueList}{imIn,blobs}                 &  \\
+    \hline
+    \SmFr{values}{blobsBarycenter}{imIn,blobs}                & Get the barycenter of each blob  \\
+    \SmFr{values}{blobsBarycenter}{imLabel,onlyNonZero}       & Create blobs and return the barycenters  \\
+    \hline
+    \SmFr{values}{blobsMoments}{imIn,blobs,central}           & Moments till 2nd order for each blob  \\
+    \SmFr{values}{blobsMoments}{imLabel,onlyNonZero,central}  & Create blobs and return moments  \\
+    \hline
+    \SmFr{mat}{blobsInertiaMatrix}{imIn,blobs,central}        & Create Inertia Matrix for each blob  \\
+    \SmFr{mat}{blobsInertiaMatrix}{imLbl,onlyNonZero,central} & Create blobs and return Inertia Matrices  \\
+    \hline
+    \SmFr{values}{blobsEntropy}{imIn,blobs}                   & Calculate the Entropy of each blob  \\
+    \hline
+    \SmFr{values}{blobsBoundBox}{imIn,blobs}                  & Bounding Box of each blob  \\
+    \SmFr{values}{blobsBoundBox}{imLabel,onlyNonZero}         &  \\
+    \hline
+    \SmFn{areaThreshold}{imIn,threshold,gt,imOut}             & Filters regions based on their area  \\
+    \hline
+  \end{tabularx}
+\end{table}

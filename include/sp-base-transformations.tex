@@ -1,0 +1,43 @@
+
+% ----------------------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Transformations}}  \\
+    \toprule
+    \BF{Function}                                                      & \BF{Description}  \\
+    \hline \hline
+    \SmFn{vertFlip}{imIn,imOut}                                        & Vertical and Horizontal mirror  \\
+    \SmFn{horizFlip}{imIn,imOut}                                       &  \\
+    \hline
+    \SmFn{rotateX90}{imIn,count,imOut}                                 & Image rotate by a multiple of 90 degrees  \\
+    \hline
+    \SmFn{translate}{imIn,dx,dy,dz,imOut,border} \Note                 & Image translation by \BF{dx, dy, dz} offset  \\
+    \hline
+    \SmFn{resize}{imIn,sx,sy,sz,imOut,method} \Note                    & Change (or multiply) image size.  \\
+    \SmFn{scale}{imIn,kx,ky,kz,imOut,method} \Note                     & method can be \BF{auto}, \BF{bilinear} (2D), \BF{trilinear} (3D) or \BF{closest} (B/W). \\
+    \hline
+    \SmFn{copy}{imIn,start(X,Y,Z),sz(X,Y,Z),imOut,oStart(X,Y,Z)} \Note & Copy \TT{imIn} into \TT{imOut}  \\
+    \SmFn{clone}{imIn,imOut}                                           & Copy \TT{imIn} into \TT{imOut}  \\
+    \hline
+    \SmFn{crop}{imIn,start(X,Y,Z),sz(X,Y,Z),imOut} \Note               & Copy \TT{imIn} into \TT{imOut}  \\
+    \hline
+    \TT{im} $\mathbf{<<}$ \BF{value}                                   & Set all pixels in \TT{im}.  \\
+    \SmFn{fill}{im,value}                                              &  \\
+    \SmFn{randFill}{im}                                                &  \\
+    \hline
+    \SmFn{cast}{imIn,imOut}                                            & Copy \TT{imIn} to \TT{imOut}  expanding range of values.  \\
+    \SmFn{rangeScale}{imIn,iMin,iMax,oMin,oMax,imOut}           & Expand range of values of \TT{imIn} to \TT{imOut}  \\
+    \SmFn{rangeScale}{imIn,oMin,oMax,imOut,onlyNonZero}         & (See documentation for details)  \\
+    \SmFn{rangeScale}{imIn,imOut,onlyNonZero}                   &  \\
+    \SmFn{sCurve}{imIn,pivot,ratio,imOut}                       & Modify contrast with help of a logistic function \\
+    \hline
+    \SmFn{compare}{imIn,condition,a,tVal,fVal,imOut} \Note             & use \TT{condition} to compare \TT{imIn} with  image or values  \\
+    \SmFn{test}{imIn,imTrue,imFalse,imOut} \Note                       & check for each pixel if it's nonZero  \\
+    \hline
+  \end{tabularx}
+\end{table}

@@ -1,0 +1,34 @@
+
+
+% ----------------------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Line based Morphology}}  \\
+    \toprule
+    \BF{Function}                                       & \BF{Description}  \\
+    \hline \hline
+    \SmFn{lineDilate}{imIn,angle,halfLength,imOut}      & Base morphological operators using a segment as SE \\
+    \SmFn{lineErode}{imIn,angle,halfLength,imOut}       &  \\
+    \SmFn{lineOpen}{imIn,angle,halfLength,imOut}        &  \\
+    \SmFn{lineClose}{imIn,angle,halfLength,imOut}       &  \\
+    \hline
+    \SmFn{squareDilate}{imIn,halfSide,imOut}            & Base morphological operators using segments as SE  \\
+    \SmFn{squareErode}{imIn,halfSide,imOut}             & One Horizontal followed by a Vertical one  \\
+    \SmFn{squareOpen}{imIn,halfSide,imOut}              &  \\
+    \SmFn{squareClose}{imIn,halfSide,imOut}             &  \\
+    \hline
+    \SmFn{circleDilate}{imIn,radius,imOut}              & Base morphological operators using segments as SE  \\
+    \SmFn{circleErode}{imIn,radius,imOut}               & Rotation of a segment  \\
+    \SmFn{circleOpen}{imIn,radius,imOut}                &  \\
+    \SmFn{circleClose}{imIn,radius,imOut}               &  \\
+    \hline
+%    \SmFn{imFastLineOpen}{imIn,angle,halfLength,imOut}  & Fast LineOpen and LineClose  \\
+%    \SmFn{imFastLineClose}{imIn,angle,halfLength,imOut} &  \\
+%    \hline
+  \end{tabularx}
+\end{table}

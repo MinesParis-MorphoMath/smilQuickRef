@@ -1,0 +1,24 @@
+
+% ----------------------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Operations on Multichannel images (Color)}}  \\
+    \toprule
+    \BF{Function}                                 & \BF{Description} \\
+    \hline \hline
+    \SmFn{splitChannels}{imMCTIn,im3DOut}         & Split channels of a \BF{RGB} image into slices of a \BF{3D} image \\
+    \hline
+    \SmFn{mergeChannels}{im3DIn,imMCTOut}         & Create a \BF{RGB} image from slices of a \BF{3D} image \\
+    \hline
+    \SmFn{copyChannel}{imMCTIn, chanNum, imOut}   & Copy a channel of a \BF{RGB} image into a \BF{2D} image \\
+    \hline
+    \SmFn{copyToChannel}{imIn, chanNum, imMCTOut} & Copy a \BF{2D} image into a channel of a \BF{RGB} image \\
+    \hline
+  \end{tabularx}
+\end{table}
+

@@ -1,0 +1,36 @@
+
+% ----------------------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Histogram}}  \\
+    \toprule
+    \BF{Function}                                           & \BF{Description}  \\
+    \hline \hline
+    \SmFr{hMap}{histogram}{imIn[,imMask][,fullRange]}       & Image histogram \\
+    \hline
+    \SmFr{hMap}{histogramMap}{imIn[,binSize]}               & Histogram compressed in \IT{bins} (option) \\
+    \SmFr{hMap}{histogramMap}{imIn,imMask[,binSize]}        & (returned map doesn't contains empty slots) \\
+    \hline
+    \SmFn{stretchHistogram}{imIn,iMin,iMax,imOut,oMin,oMax} & Output image is a histogram based linear transform   \\
+    \SmFn{stretchHistogram}{imIn,imOut,oMin,oMax}           & of input image. \\
+    \SmFn{stretchHistogram}{imIn,imOut}                     & (See documentation for details) \\
+    \hline
+    \SmFn{threshold}{imIn,iMin,iMax,tVal,fVal,imOut}        & Threshold  \\
+    \SmFn{threshold}{imIn,iMin,iMax,imOut}                  & \\
+    \SmFn{threshold}{imIn,iMin,imOut}                       & \\
+    \hline
+    \SmFn{threshold}{imIn,imOut}                            & Otsu's threshold with two classes \\
+    \SmFn{otsuThreshold}{imIn,imOut,nTresholds} \Note       &  \\
+    \SmFn{otsuThreshold}{imIn,imMask,imOut[,nThresholds]}   & Multi-Otsu \\
+    \SmFn{otsuThresholdValues}{imIn,nThresholds}            &  \\
+    \SmFn{otsuThresholdValues}{hist,nThresholds}            &  \\
+    \hline
+    \SmFn{enhanceContrast}{imIn,imOut,saturation}           & Enhance image contrast \\
+    \hline
+  \end{tabularx}
+\end{table}

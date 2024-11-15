@@ -1,0 +1,116 @@
+%
+% S M I L   preamble for Smil TEX documents
+% 
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{times}
+%\rmfamily
+%\renewcommand\familydefault{cmr}
+
+\usepackage{caption}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+
+% pour FloatBarrier
+\usepackage{codesection}
+\usepackage{placeins}
+
+
+\usepackage[left=2.00cm, right=1.50cm, top=2.00cm, bottom=1.50cm]{geometry}
+
+\title{SMIL}
+\author{James Bond}
+\date{Revision : \today}
+
+% shall put this after begin{itemize}
+%\setlength{\itemsep}{3em}
+
+\setlength{\parskip}{0.2em}
+\setlength{\parindent}{0em} 
+
+%
+% listings package
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.3,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+\lstset{style=mystyle}
+
+% 
+% Macro - Smil functions
+%
+
+% One alias for the function name and another for the parameters
+% will expand to "#1"
+\newcommand{\SmFun}[1]{\texttt{\textbf{#1}}}
+% will expand to "(#2)"
+\newcommand{\SmPar}[1]{\texttt{\BF{(}#1\BF{)}}}
+
+% Combine function name and parameters in a single alias
+% will expand to #1(#2)
+\newcommand{\SmFn}[2] {\SmFun{#1}\SmPar{#2}}
+
+
+% will expand to (2 lines)
+% #1
+%    (#2)
+\newcommand{\SmFnDL}[2] {\SmFun{#1}\\ \hspace{35pt}\SmPar{#2}}
+
+% A function with some return value
+% will expand to "#1 = #2(#3)"
+\newcommand{\SmFnRet}[3]{\TT{#1 = }\SmFun{#2}\SmPar{#3}}
+\newcommand{\SmFr}[3]{\TT{#1 = }\SmFun{#2}\SmPar{#3}}
+%
+%
+%
+\newcommand{\Note}{\BF{*}}
+
+\newcommand{\BF}[1]{\textbf{#1}}
+\newcommand{\TT}[1]{\texttt{#1}}
+\newcommand{\IT}[1]{\textit{#1}}
+
+\newcommand{\TTBF}[1]{\texttt{\textbf{#1}}}
+\newcommand{\TIBF}[1]{\textit{\textbf{#1}}}
+
+% pour les tables
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+\usepackage{array}
+\newcolumntype{L}{>{\arraybackslash}m{7cm}}
+\newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
+
+% \newcolumntype{C}{>{$}c<{$}}
+% \newcolumntype{L}{>{$}l<{$}}
+% \newcolumntype{R}{>{$}r<{$}}
+

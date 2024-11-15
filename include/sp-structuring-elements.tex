@@ -1,0 +1,102 @@
+% ---------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Define, modify and restore default Structuring Element}}                              \\
+    \toprule
+    \BF{Function}                          & \BF{Description}                                                      \\
+    \hline \hline
+    \SmFr{se}{Morpho.getDefaultSE}{}       & Get default Structuring Element                                       \\
+    \hline
+    \SmFn{Morpho.setDefaultSE}{CrossSE()}  & Set default Structuring Element to \TT{CrossSE()}                     \\
+    \hline
+    \SmFn{se.printSelf}{}                  & Print Structuring Element content                                     \\
+    \hline
+    \SmFr{mySE}{StrElt}{HexFlag,PointList} & Construct a structuring element with points defined by their indexes. \\
+                                           & Ex. : \TT{mySE = StrElt(False,(0,1,5)}  equals \TT{HorizSE()}         \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+\begin{figure*}[h!]
+  \centering
+  \includegraphics[width=0.25\textwidth]{images/SE_indexes.png}
+  \caption*{Structuring Element Grids}
+\end{figure*}
+
+% ----------------------------------------------------------------------
+%
+%
+%
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|l|r|Y|}
+    \toprule
+    \multicolumn{4}{|c|}{\BF{Pre-defined Structuring Elements}}                                             \\
+    \toprule
+    \BF{Structuring Element}            & \BF{Grid} & \BF{Points} & \BF{Description}                        \\
+    \hline \hline
+    \TTBF{CrossSE()}                    & Square    & 5           & \TT{(0,1,3,5,7)}                        \\
+    \hline
+    \TTBF{SquSE()}                      & Square    & 9           & \TT{(0,1,2,3,4,5,6,7)}                  \\
+    \hline
+    \TTBF{HorizSE()}                    & Square    & 3           & \TT{(0,1,5)}                            \\
+    \hline
+    \TTBF{VertSE()}                     & Square    & 3           & \TT{(0,3,7)}                            \\
+    \hline
+    \TTBF{HexSE()}                      & Hexagonal & 7           & \TT{(0,1,2,3,4,5,6)}                    \\
+    \hline
+    \TTBF{Cross3DSE()}                  & Cubic     & 7           & \TT{(0,1,3,5,7,8,16)}                   \\
+    \hline
+    \TTBF{CubeSE()}                     & Cubic     & 27          & \TT{(0,1,2,3,4,5,6,7,8,...,26)}         \\
+    \hline
+    \TTBF{RhombicubeoctaedronSE()}      & Cubic     & 81          & \TT{(..)}                               \\
+    \hline
+    \SmFn{LineSE}{len,$\theta$}         & Square    &             & 2D line with arbitrary length and angle starting from origin \\
+    \hline
+    \SmFn{Line3DSE}{len,$\theta$,$\phi$} & Square    &             & 3D line with arbitrary length and angle starting from origin \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+
+\begin{table}[h!]
+  \centering
+  \begin{tabularx}{\linewidth}{|l|Y|}
+    \toprule
+    \multicolumn{2}{|c|}{\BF{Operations on Structuring Elements}} \\
+    \toprule
+    \BF{Methods}                     & \BF{Description}           \\
+    \hline \hline
+    \SmFr{se}{StrElt}{size = 1 | se} & Constructor                \\
+    \hline \hline
+    \SmFr{se}{transpose}{}           &                            \\
+    \hline
+      \SmFr{se}{merge}{}       &   \\
+    \hline
+      \SmFr{se}{homothety}{}       &   \\
+    \hline
+    \SmFr{se}{clone}{}               &                            \\
+    \hline
+    \SmFr{se}{noCenter}{}            &                            \\
+    \hline
+    \SmFr{se}{operator}{size = 1}    &                            \\
+    \hline
+      \SmFn{setName}{name = ""}   &   \\
+    \hline
+      \SmFr{name}{getName}{}   &   \\
+    \hline
+      \SmFn{addPoint}{Point | x,y[,z]}   &   \\
+    \hline
+      \SmFr{point}{getPoint}{i}       &   \\
+    \hline
+    \SmFr{point}{getPoint}{i}        &                            \\
+    \hline
+    \SmFn{printSelf}{}               &                            \\
+    \hline
+  \end{tabularx}
+\end{table}
